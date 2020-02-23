@@ -81,8 +81,10 @@ Done.
 ```
 
 ## Results
+
 ### Random Agent
 <p align="center"><img src="./res/Random_Agent.gif" alt="Random Agent"  width="320" /></p>
+
 ### DDQN Agent
 <p align="center"><img src="./output/ddqn_agent/result_img_0.png" alt="Result 0"  width="405" /> <img src="./output/ddqn_agent/result_img_1.png" alt="Result 1"  width="405" /></p>
 <p align="center"><img src="./res/DDQN_Agent.gif" alt="DDQN Agent"  width="320" /></p>
