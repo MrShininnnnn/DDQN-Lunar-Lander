@@ -1,4 +1,4 @@
-# DDQN-Lunar-Lander
+# DDQN Lunar Lander
 
 ## Introduction
 The goal of this project is to earn more than +200 reward on average over 100 trials in the game [Lunar Lander](https://gym.openai.com/envs/LunarLander-v2/). To tackle this challenge, a Double Deep Q-Network (DDQN) is introduced and implemented with a detailed explanation.
