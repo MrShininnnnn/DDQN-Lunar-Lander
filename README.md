@@ -1,7 +1,7 @@
 # DDQN Lunar Lander
 
 ## Introduction
-The goal of this project is to earn more than +200 reward on average over 100 trials in the game [Lunar Lander](https://gym.openai.com/envs/LunarLander-v2/). To tackle this challenge, a Double Deep Q-Network (DDQN) is introduced and implemented with a detailed explanation.
+The goal of this project is to earn more than +200 reward on average over 100 trials in the game [Lunar Lander](https://gym.openai.com/envs/LunarLander-v2/). To tackle this challenge, a Double Deep Q-Network (DDQN) (Hasselt et al. 2016) is introduced and implemented with a detailed explanation.
 
 ## Lunar Lander
 <p align="center"><img src="./res/Lunar_Lander.gif" alt="Lunar Lander"  width="320" /></p>
@@ -18,6 +18,9 @@ For each time step, there are four discrete actions available, that is, doing no
 The game will be over or passed if the lander crashes or comes to rest. The reward for a bad ending is -100, while that for a happy ending is +100. The touching of the leg to the ground can generate a +10 reward, but each time of firing the main engine incurs a -0.3 penalty. Therefore, the total reward for a single episode ranges from 100 to more than 200 based on the final location of the lander on the pad. The distance between the landing pad and the lander will cause a penalization, which equals to the reward gained by moving closer to the pad. 
 
 In this project, a method will be treated as a successful solution for this game if it is able to achieve more than +200 points average over 100 consecutive episodes.
+
+## Double Deep Q-Network
+In 2010, Hasselt found an overestimation bias when using Q-Learning to solve several Atari games. Taking a special state as an example, where the real Q value for every action equals zero, the estimated Q values will be around zero and cause the overestimation of Q values. There is a big problem with learning estimates from estimates in the Q-Learning method. Fortunately, it can be tackled by employing two separate Q-value estimators updating each other. Thus, this approach has the name Double Q-Learning, which is one of the most popular methods in recent years (Hasselt 2010; Van Hasselt, Guez, and Silver 2016; Fujimoto, van Hoof, and Meger 2018). Borrowing the idea of Hasselt et al. (2016), we applied the Double Deep Q-Network (DDQN) with the assistance of deep learning.
 
 ## Directory
 + **main.py** - to conduct the entire project directly and show some figures
@@ -96,3 +99,4 @@ Done.
 1. Hasselt, H. V. (2010). Double Q-learning. In Advances in neural information processing systems (pp. 2613-2621).
 2. Van Hasselt, H., Guez, A., & Silver, D. (2016, March). Deep reinforcement learning with double q-learning. In Thirtieth AAAI conference on artificial intelligence.
 3. Brockman, G., Cheung, V., Pettersson, L., Schneider, J., Schulman, J., Tang, J., & Zaremba, W. (2016). Openai gym. arXiv preprint arXiv:1606.01540.
+4. Fujimoto, S., Van Hoof, H., & Meger, D. (2018). Addressing function approximation error in actor-critic methods. arXiv preprint arXiv:1802.09477.
