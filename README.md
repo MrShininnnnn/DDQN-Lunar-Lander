@@ -66,11 +66,11 @@ To generate video record for an episode:
 
 ## Results
 ### Random Agent
-![Random Agent](res/Random_Agent.gif)
+<p align="center"><img src="./res/Random_Agent.gif" alt="Random Agent"  width="320" /></p>
 ### DDQN Agent
-![Result 0](output/ddqn_agent/result_img_0.png)
-![Result 1](output/ddqn_agent/result_img_1.png)
-![DDQN Agent](res/DDQN_Agent.gif)
+<p align="center"><img src="./output/ddqn_agent/result_img_0.png" alt="Result 0"  width="405" /> <img src="./output/ddqn_agent/result_img_1.png" alt="Result 1"  width="405" /></p>
+<p align="center"><img src="./res/DDQN_Agent.gif" alt="DDQN Agent"  width="320" /></p>
+
 ## Authors
 * **[Ning Shi](https://mrshininnnnn.github.io/)** - MrShininnnnn@gmail.com
 

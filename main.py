@@ -11,6 +11,7 @@ import torch
 import numpy as np
 from tqdm import trange
 from collections import deque
+import matplotlib.pyplot as plt
 
 from config import Config
 from src.agent import DDQN_Agent
@@ -112,7 +113,7 @@ class LunarLander():
             while not done:
                 # disable epsilon greedy search
                 action = agent.act(state, epsilon=0)
-                state, reward, done, _ = env.step(action)
+                state, reward, done, _ = self.env.step(action)
                 rewards += reward
             t.set_description('Episode {:.2f} Reward {:.2f}'.format(episode + 1, rewards))
             t.refresh()
@@ -128,7 +129,7 @@ class LunarLander():
         plt.yticks(fontsize=12)
         plt.title('Total Rewards Per Trial for 100 Trials - Average: {:.2f}'.format(avg_test_reward), 
                   fontsize=12)
-        plt.savefig(DDQN_RESULT_IMG_PATH.format(1), dpi=100, bbox_inches='tight')
+        plt.savefig(self.config.DDQN_RESULT_IMG_PATH.format(1), dpi=100, bbox_inches='tight')
         print('Save evaluation rewards plot as {}.'.format(self.config.DDQN_RESULT_IMG_PATH.format(1)))
         # play a round
         env = wrappers.Monitor(self.env, self.config.DDQN_AGENT_PATH, force=True)
