@@ -4,8 +4,8 @@
 The goal of this project is to earn more than +200 reward on average over 100 trials in the game [Lunar Lander](https://gym.openai.com/envs/LunarLander-v2/). To tackle this challenge, a Double Deep Q-Network (DDQN) is introduced and implemented with a detailed explanation.
 
 ## Lunar Lander
-![Lunar Lander](res/LunarLander.gif)
-<center>(https://gym.openai.com/envs/LunarLander-v2/)</center>
+<p align="center"><img src="./res/LunarLander.gif" alt="Lunar Lander"  width="320" /></p>
+<p align="center">(https://gym.openai.com/envs/LunarLander-v2/)</p>
 
 Lunar Lander of OpenAI Gym (Brockman et al. 2016) is an interactive environment for an agent to land a rocket on a planet. A state here can be represented by an 8-dimensional continuous space:  
 
