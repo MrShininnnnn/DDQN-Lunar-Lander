@@ -4,7 +4,7 @@
 The goal of this project is to earn more than +200 reward on average over 100 trials in the game [Lunar Lander](https://gym.openai.com/envs/LunarLander-v2/). To tackle this challenge, a Double Deep Q-Network (DDQN) is introduced and implemented with a detailed explanation.
 
 ## Lunar Lander
-<p align="center"><img src="./res/LunarLander.gif" alt="Lunar Lander"  width="320" /></p>
+<p align="center"><img src="./res/Lunar_Lander.gif" alt="Lunar Lander"  width="320" /></p>
 <p align="center">(https://gym.openai.com/envs/LunarLander-v2/)</p>
 
 Lunar Lander of OpenAI Gym (Brockman et al. 2016) is an interactive environment for an agent to land a rocket on a planet. A state here can be represented by an 8-dimensional continuous space:  
@@ -63,6 +63,22 @@ To generate video record for an episode:
 * On OS X, you can install ffmpeg via `brew install ffmpeg`. 
 * On most Ubuntu variants, `sudo apt-get install ffmpeg` should do it. 
 * On Ubuntu 14.04, however, you'll need to install avconv with `sudo apt-get install libav-tools`.
+
+## Output
+```
+Initialize the environment...
+
+Training...
+Episode 622 Epsilon 0.09 Reward 255.82 Avg_Reward 201.26 Best_Avg_Reward 199.03:  62%|████████████████████████████████████████████████████████████████████████▋                                            | 621/1000 [28:58<11:28,  1.82s/it]
+Save training rewards plot as ~/DDQN-Lunar-Lander/output/ddqn_agent/result_img_0.png.
+
+Evaluating...
+Episode 100.00 Reward 266.90: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:53<00:00,  1.88it/s]
+Save evaluation rewards plot as ~/DDQN-Lunar-Lander/output/ddqn_agent/result_img_1.png.
+Total rewards in a game: 163.29
+Save video record to ~/DDQN-Lunar-Lander/output/ddqn_agent.
+Done.
+```
 
 ## Results
 ### Random Agent

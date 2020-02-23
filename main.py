@@ -86,7 +86,7 @@ class LunarLander():
                 plt.yticks(fontsize=12)
                 plt.title('Total Rewards Per Episode for {} Training Episodes'.format(episode + 1), fontsize=12)
                 plt.savefig(self.config.DDQN_RESULT_IMG_PATH.format(0), dpi=100, bbox_inches='tight')
-                print('Save training rewards plot as {}.'.format(self.config.DDQN_RESULT_IMG_PATH.format(0)))
+                print('\nSave training rewards plot as {}.'.format(self.config.DDQN_RESULT_IMG_PATH.format(0)))
                 break
 
     def eva(self):
@@ -130,7 +130,7 @@ class LunarLander():
         plt.title('Total Rewards Per Trial for 100 Trials - Average: {:.2f}'.format(avg_test_reward), 
                   fontsize=12)
         plt.savefig(self.config.DDQN_RESULT_IMG_PATH.format(1), dpi=100, bbox_inches='tight')
-        print('Save evaluation rewards plot as {}.'.format(self.config.DDQN_RESULT_IMG_PATH.format(1)))
+        print('\nSave evaluation rewards plot as {}.'.format(self.config.DDQN_RESULT_IMG_PATH.format(1)))
         # play a round
         env = wrappers.Monitor(self.env, self.config.DDQN_AGENT_PATH, force=True)
         state = env.reset()
@@ -142,15 +142,15 @@ class LunarLander():
             state, reward, done, _ = env.step(action)
             rewards += reward
         env.close()
-        print('Total Rewards in a game: {:.2f}'.format(rewards))
+        print('Total rewards in a game: {:.2f}'.format(rewards))
         print('Save video record to {}.'.format(self.config.DDQN_AGENT_PATH))
 
 def main():
     print('\nInitialize the environment...')
     ll = LunarLander()
-    print('Training...')
+    print('\nTraining...')
     ll.train()
-    print('Evaluating...')
+    print('\nEvaluating...')
     ll.eva()
     print('Done.')
 
